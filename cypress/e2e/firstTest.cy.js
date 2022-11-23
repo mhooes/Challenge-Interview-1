@@ -37,9 +37,9 @@ describe('Challenge entrevista tecnica', () => {
 
     it('Validar segunda categoria', () => {
         navBarPage.hoverCategories();
-        navBarPage.selectCategories(`${categories.categorieTwo.principal}`);
-        subCategoriesPage.selectSubCategorie(`${categories.categorieTwo.subCategories[0]}`);
-        selectedCategoriePage.getTitleCategorie(`${categories.categorieTwo.principal } ${categories.categorieOne.subCategories[0]}`).should('exist');
+        navBarPage.selectCategories(`${categories.categorieThree.principal}`);
+        subCategoriesPage.selectSubCategorie(`${categories.categorieThree.subCategories[0]}`);
+        selectedCategoriePage.getTitleCategorie(`${categories.categorieThree.subCategories[0] }`).should('exist');
         selectedCategoriePage.getQuantityResults().should('exist');       
     })
 

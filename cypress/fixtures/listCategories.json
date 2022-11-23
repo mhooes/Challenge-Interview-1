@@ -7,14 +7,16 @@
         ]
     },
     "categorieTwo": {
-        "principal": "Bebés",
+        "principal": "Juegos y Juguetes",
         "subCategories": [
             "0 A 24 MESES"
         ]
     },
     "categorieThree": {
         "principal": "Agro",
-        "subCategories": []
+        "subCategories": [
+            "CAMIONES"
+        ]
     },
     "categorieFour": {
         "principal": "Más vendidos",
