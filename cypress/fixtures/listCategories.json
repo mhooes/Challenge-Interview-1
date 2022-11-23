@@ -1,0 +1,27 @@
+{
+    "categorieOne": {
+        "principal": "Herramientas",
+        "subCategories": [
+            "ELÉCTRICAS",
+            "MANUALES"
+        ]
+    },
+    "categorieTwo": {
+        "principal": "Bebés",
+        "subCategories": [
+            "0 A 24 MESES"
+        ]
+    },
+    "categorieThree": {
+        "principal": "Agro",
+        "subCategories": []
+    },
+    "categorieFour": {
+        "principal": "Más vendidos",
+        "subCategories": []
+    },
+    "categorieFive": {
+        "principal": "Construcción",
+        "subCategories": []
+    }
+}
