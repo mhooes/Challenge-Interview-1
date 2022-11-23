@@ -24,6 +24,8 @@
     },
     "categorieFive": {
         "principal": "Construcción",
-        "subCategories": []
+        "subCategories": [
+            "PINTURAS"
+        ]
     }
 }
