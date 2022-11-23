@@ -4,13 +4,14 @@
 import { navBar } from '../support/pages/navBar'
 import { subCategories } from '../support/pages/subCategories'
 import { selectedCategorie } from '../support/pages/selectedCategorie'
-
+import { listProducts } from '../support/pages/listProducts'
 
 describe('Challenge entrevista tecnica', () => {
     //POM Constants
     const navBarPage = new navBar();
     const subCategoriesPage = new subCategories()
     const selectedCategoriePage = new selectedCategorie()
+    const listProductsPage = new listProducts()
 
     //let Fixtures
     let categories,ubications
@@ -52,7 +53,9 @@ describe('Challenge entrevista tecnica', () => {
         subCategoriesPage.selectSubCategorie(`${categories.categorieFive.subCategories[0]}`);
         selectedCategoriePage.getTitleCategorie(`${categories.categorieFive.subCategories[0]}`).should('exist');
         selectedCategoriePage.getQuantityResults().should('exist');
-        selectedCategoriePage.selectUbication(ubications)
+        selectedCategoriePage.selectUbication(ubications);
+        listProductsPage.getRandomProduct();
+
     })
 
 });
