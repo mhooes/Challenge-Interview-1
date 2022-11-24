@@ -47,7 +47,7 @@ describe('Challenge entrevista tecnica', () => {
         selectedCategoriePage.getQuantityResults().should('exist');
     })
 
-    it.only('Validar datos de publicacion de Tercera categoria', () => {
+    it('Validar datos de publicacion de Tercera categoria', () => {
         navBarPage.hoverCategories();
         navBarPage.selectCategories(`${categories.categorieFive.principal}`);
         subCategoriesPage.selectSubCategorie(`${categories.categorieFive.subCategories[0]}`);
