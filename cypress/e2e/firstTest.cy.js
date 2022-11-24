@@ -54,8 +54,7 @@ describe('Challenge entrevista tecnica', () => {
         selectedCategoriePage.getTitleCategorie(`${categories.categorieFive.subCategories[0]}`).should('exist');
         selectedCategoriePage.getQuantityResults().should('exist');
         selectedCategoriePage.selectUbication(ubications);
-        listProductsPage.getRandomProduct();
-
+        listProductsPage.validateProductData()
     })
 
 });
