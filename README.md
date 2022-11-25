@@ -7,7 +7,7 @@
 ## Práctica entrevista técnica [Cypress](https://www.cypress.io), [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) y [Node.js](https://nodejs.org/en/)
 
 ### NOTA
-Esta es una prrueba tecnica para un puesto de Automation SSR, he intentado resolverla en base a mi nivel de conocimiento e investigacion, lo cual queda mas que claro que no estoy a la altura de la solucion que puede brindar una persona con el senority correspondiente.
+Esta es una prrueba tecnica para un puesto de Automation SSR, he intentado resolverla en base a mi nivel de conocimiento(JR) e investigacion. 
 
 Se utilizaron 2 extensiones:
 - Cypress-xpath : https://www.npmjs.com/package/cypress-xpath
