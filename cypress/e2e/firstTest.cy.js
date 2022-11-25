@@ -14,7 +14,7 @@ describe('Challenge entrevista tecnica', () => {
     const listProductsPage = new listProducts()
 
     //let Fixtures
-    let categories,ubications
+    let categories, ubications, products
 
     before(() => {
 
@@ -24,6 +24,10 @@ describe('Challenge entrevista tecnica', () => {
 
         cy.fixture('listUbications').then(listUbications => {
             ubications = listUbications;
+        });
+
+        cy.fixture('product').then(product => {
+            products = product;
         });
     })
 
@@ -55,6 +59,22 @@ describe('Challenge entrevista tecnica', () => {
         selectedCategoriePage.getQuantityResults().should('exist');
         selectedCategoriePage.selectUbication(ubications);
         listProductsPage.validateProductData()
+    })
+
+    it('Backend testing', () => {
+        const random = [Math.floor(Math.random() * (55 - 1 + 1)) + 1]
+        cy.request('GET', `https://api.mercadolibre.com/sites/MLA/search?q=${products}`).then(response => {
+            expect(response.status).eq(200);
+            cy.request('GET', `https://api.mercadolibre.com/items/${response.body.results[random].id}`).then(responseProduct => {
+                expect(response.body.results[random].id).eq(responseProduct.body.id);
+                expect(response.body.results[random].price).eq(responseProduct.body.price)
+                expect(response.body.results[random].title).eq(responseProduct.body.title)
+                expect(response.body.results[random].accepts_mercadopago).eq(responseProduct.body.accepts_mercadopago)
+                expect(response.body.results[random].currency_id).eq(responseProduct.body.currency_id)
+                expect(response.body.results[random].shipping.free_shipping).eq(responseProduct.body.shipping.free_shipping)
+
+            })
+        })
     })
 
 });
