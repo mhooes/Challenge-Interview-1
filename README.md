@@ -4,7 +4,7 @@
 
 # [![Cypress](https://cloud.githubusercontent.com/assets/1268976/20607953/d7ae489c-b24a-11e6-9cc4-91c6c74c5e88.png)](https://www.cypress.io)
 
-## Proyecto de practica  basado en [Cypress](https://www.cypress.io), [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) y [Node.js](https://nodejs.org/en/)
+## Práctica entrevista técnica [Cypress](https://www.cypress.io), [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) y [Node.js](https://nodejs.org/en/)
 
 ### NOTA
 Esta es una prrueba tecnica para un puesto de Automation SSR, he intentado resolverla en base a mi nivel de conocimiento e investigacion, lo cual queda mas que claro que no estoy a la altura de la solucion que puede brindar una persona con el senority correspondiente.
