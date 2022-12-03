@@ -31,7 +31,7 @@ describe('Challenge entrevista tecnica', () => {
         });
     })
 
-    beforeEach(() => {
+    before(() => {
         cy.visit('');
     });
 

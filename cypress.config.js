@@ -8,6 +8,7 @@ module.exports = defineConfig({
     baseUrl: 'https://www.mercadolibre.com.ar',
     watchForFileChanges: false,
     viewportWidth: 1600,
-    viewportHeight: 900
+    viewportHeight: 900,
+    reporter: 'mochawesome'
   },
 });

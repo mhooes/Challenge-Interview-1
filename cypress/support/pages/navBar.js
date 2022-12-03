@@ -1,12 +1,12 @@
 export class navBar {
 
     constructor() {
-        this.menuCategs = '.nav-menu-categories-link';
+        this.menuCategs = '//div[@class="nav-menu"]//a[text()="Categorías"]';
         this.navCategs = '.nav-categs'
     }
 
     hoverCategories() {
-       cy.get( this.menuCategs).realHover();
+        cy.xpath(this.menuCategs).realHover({ force: true });
     };
 
     selectCategories(categories) {
