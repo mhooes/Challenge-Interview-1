@@ -35,7 +35,7 @@ describe('Challenge entrevista tecnica', () => {
         cy.visit('');
     });
 
-    it('Validar primer categoria', () => {
+    it('Validar categoria', () => {
         navBarPage.hoverCategories();
         navBarPage.selectCategories(`${categories.categorieOne.principal}`);
         subCategoriesPage.selectSubCategorie(`${categories.categorieOne.subCategories[0]}`);
