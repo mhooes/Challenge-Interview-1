@@ -31,7 +31,7 @@ describe('Challenge entrevista tecnica', () => {
         });
     })
 
-    before(() => {
+    beforeEach(() => {
         cy.visit('');
     });
 
@@ -43,23 +43,6 @@ describe('Challenge entrevista tecnica', () => {
         selectedCategoriePage.getQuantityResults().should('exist');
     })
 
-    it('Validar segunda categoria', () => {
-        navBarPage.hoverCategories();
-        navBarPage.selectCategories(`${categories.categorieThree.principal}`);
-        subCategoriesPage.selectSubCategorie(`${categories.categorieThree.subCategories[0]}`);
-        selectedCategoriePage.getTitleCategorie(`${categories.categorieThree.subCategories[0]}`).should('exist');
-        selectedCategoriePage.getQuantityResults().should('exist');
-    })
-
-    it('Validar datos de publicacion de Tercera categoria', () => {
-        navBarPage.hoverCategories();
-        navBarPage.selectCategories(`${categories.categorieFive.principal}`);
-        subCategoriesPage.selectSubCategorie(`${categories.categorieFive.subCategories[0]}`);
-        selectedCategoriePage.getTitleCategorie(`${categories.categorieFive.subCategories[0]}`).should('exist');
-        selectedCategoriePage.getQuantityResults().should('exist');
-        selectedCategoriePage.selectUbication(ubications);
-        listProductsPage.validateProductData()
-    })
 
     it('Backend testing', () => {
         const random = [Math.floor(Math.random() * (50 - 1 + 1)) + 1]
