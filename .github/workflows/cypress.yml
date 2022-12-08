@@ -1,7 +1,0 @@
-# cypress.yml
-
-reporter: mochawesome
-reporterOptions:
-  reportDir: cypress/reports
-  reportFilename: report
-  quiet: true
