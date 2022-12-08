@@ -1,0 +1,27 @@
+name: Cypress test run
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 11.x
+      - name: Install dependencies
+        run: npm install
+      - name: Run Cypress tests
+        run: npx cypress run
+      - name: Generate mochawesome report
+        run: npx mochawesome-merge --reportDir cypress/mochawesome-report > mochawesome.json
+      - name: Upload mochawesome report
+        uses: actions/upload-artifact@v2
+        with:
+          name: mochawesome-report
+          path: mochawesome.json
