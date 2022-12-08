@@ -28,4 +28,4 @@ jobs:
       - name: Publish report to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-              FOLDER: cypress/mochawesome-report
+              FOLDER: mochawesome-report
