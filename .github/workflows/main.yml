@@ -20,8 +20,14 @@ jobs:
         run: npx cypress run
 #      - name: Generate mochawesome report
 #        run: npx mochawesome-merge --reportDir cypress/mochawesome-report > mochawesome.json
-      - name: Upload mochawesome report
-        uses: actions/upload-artifact@v2
+#     - name: Upload mochawesome report
+#      uses: actions/upload-artifact@v2
+#     with:
+#      name: mochawesome-report
+#      path: mochawesome-report
+      - name: Publish report to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          name: mochawesome-report
-          path: mochawesome-report
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: cypress/mochawesome-report
