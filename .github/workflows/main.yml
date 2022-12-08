@@ -26,8 +26,6 @@ jobs:
 #      name: mochawesome-report
 #      path: mochawesome-report
       - name: Publish report to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: cypress/mochawesome-report
+              FOLDER: cypress/mochawesome-report
