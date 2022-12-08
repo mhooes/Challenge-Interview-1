@@ -18,13 +18,9 @@ jobs:
         run: npm install
       - name: Run Cypress tests
         run: npx cypress run
-#      - name: Generate mochawesome report
-#        run: npx mochawesome-merge --reportDir cypress/mochawesome-report > mochawesome.json
-#     - name: Upload mochawesome report
-#      uses: actions/upload-artifact@v2
-#     with:
-#      name: mochawesome-report
-#      path: mochawesome-report
+      - name: Rename report file
+        run: |
+             mv mochawesome-report/mochawesome.html mochawesome-report/index.html
       - name: Publish report to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
