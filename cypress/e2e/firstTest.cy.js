@@ -46,7 +46,7 @@ describe('Challenge entrevista tecnica', () => {
     })
 
 
-    it('Backend testing', () => {
+    it.only('Backend testing', () => {
         const random = [Math.floor(Math.random() * (50 - 1 + 1)) + 1]
         cy.request('GET', `https://api.mercadolibre.com/sites/MLA/search?q=${products}`).then(response => {
             expect(response.status).eq(200);
