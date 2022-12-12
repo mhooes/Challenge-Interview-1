@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-12-08T19:18:22.824Z",
-    "end": "2022-12-08T19:18:29.378Z",
-    "duration": 6554,
+    "start": "2022-12-12T16:36:16.272Z",
+    "end": "2022-12-12T16:36:23.427Z",
+    "duration": 7155,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e1d5dc31-b451-4180-8767-5845a5cdd9f3",
+      "uuid": "237a44bc-5d7c-4311-afc7-5c3dbdf3b2e3",
       "title": "",
       "fullFile": "cypress/e2e/firstTest.cy.js",
       "file": "cypress/e2e/firstTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e9d440a7-6d7d-4915-a372-4b2ccd2e7c62",
+          "uuid": "6aa35b82-25ac-44d9-b8b2-eb4461cccef9",
           "title": "Challenge entrevista tecnica",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Backend testing",
               "fullTitle": "Challenge entrevista tecnica Backend testing",
               "timedOut": null,
-              "duration": 6276,
+              "duration": 6943,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const random = [Math.floor(Math.random() * (50 - 1 + 1)) + 1];\ncy.request('GET', `https://api.mercadolibre.com/sites/MLA/search?q=${products}`).then(response => {\n  expect(response.status).eq(200);\n  cy.request('GET', `https://api.mercadolibre.com/items/${response.body.results[random].id}`).then(responseProduct => {\n    expect(response.body.results[random].id).eq(responseProduct.body.id);\n    expect(response.body.results[random].price).eq(responseProduct.body.price);\n    expect(response.body.results[random].title).eq(responseProduct.body.title);\n    expect(response.body.results[random].accepts_mercadopago).eq(responseProduct.body.accepts_mercadopago);\n    expect(response.body.results[random].currency_id).eq(responseProduct.body.currency_id);\n    expect(response.body.results[random].shipping.free_shipping).eq(responseProduct.body.shipping.free_shipping);\n  });\n});",
               "err": {},
-              "uuid": "be61de17-073e-4c95-9681-c036bbcbe989",
-              "parentUUID": "e9d440a7-6d7d-4915-a372-4b2ccd2e7c62",
+              "uuid": "f652e328-bd2a-42b5-8a0a-2d412829cd22",
+              "parentUUID": "6aa35b82-25ac-44d9-b8b2-eb4461cccef9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "be61de17-073e-4c95-9681-c036bbcbe989"
+            "f652e328-bd2a-42b5-8a0a-2d412829cd22"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6276,
+          "duration": 6943,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
