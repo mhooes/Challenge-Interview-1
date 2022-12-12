@@ -38,3 +38,7 @@ npm install
 ```bash
 npx cypress open
 ```
+
+### **Reporte generado en mochawesome. (Se actualiza automaticamente luego de la ejecucion de los test en Github Actions)**
+
+https://mhooes.github.io/Challenge-Interview-1/
