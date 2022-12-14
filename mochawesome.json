@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-12-13T14:50:46.262Z",
-    "end": "2022-12-13T14:51:59.735Z",
-    "duration": 73473,
+    "start": "2022-12-14T14:17:26.845Z",
+    "end": "2022-12-14T14:18:16.354Z",
+    "duration": 49509,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7c7d301a-7a12-43ce-b268-b67c71fe5016",
+      "uuid": "b4de50d5-8f3c-491b-8847-3ba340c51aa5",
       "title": "",
       "fullFile": "cypress/e2e/firstTest.cy.js",
       "file": "cypress/e2e/firstTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f2f70f62-09ff-4fe4-92e2-0dcc0f081d4a",
+          "uuid": "74fa90cf-b96e-44f7-830f-c9892ce39c6b",
           "title": "Challenge entrevista tecnica",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Validar categoria",
               "fullTitle": "Challenge entrevista tecnica Validar categoria",
               "timedOut": null,
-              "duration": 66352,
+              "duration": 44395,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "navBarPage.hoverCategories();\nnavBarPage.selectCategories(`${categories.categorieOne.principal}`);\nsubCategoriesPage.selectSubCategorie(`${categories.categorieOne.subCategories[0]}`);\nselectedCategoriePage.getTitleCategorie(`${categories.categorieOne.principal} ${categories.categorieOne.subCategories[0]}`).should('exist');\nselectedCategoriePage.getQuantityResults().should('exist');\nselectedCategoriePage.selectUbication(ubications);\nlistProductsPage.validateProductData();",
               "err": {},
-              "uuid": "17127fad-f6b1-4d9f-b632-676bfb6563dc",
-              "parentUUID": "f2f70f62-09ff-4fe4-92e2-0dcc0f081d4a",
+              "uuid": "7d9295d2-11f9-474e-8b1a-3eeae27ecd5e",
+              "parentUUID": "74fa90cf-b96e-44f7-830f-c9892ce39c6b",
               "isHook": false,
               "skipped": false
             },
@@ -56,30 +56,30 @@
               "title": "Backend testing",
               "fullTitle": "Challenge entrevista tecnica Backend testing",
               "timedOut": null,
-              "duration": 6680,
+              "duration": 4871,
               "state": "passed",
-              "speed": "medium",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "const random = [Math.floor(Math.random() * (50 - 1 + 1)) + 1];\ncy.request('GET', `https://api.mercadolibre.com/sites/MLA/search?q=${products}`).then(response => {\n  expect(response.status).eq(200);\n  cy.request('GET', `https://api.mercadolibre.com/items/${response.body.results[random].id}`).then(responseProduct => {\n    expect(response.body.results[random].id).eq(responseProduct.body.id);\n    expect(response.body.results[random].price).eq(responseProduct.body.price);\n    expect(response.body.results[random].title).eq(responseProduct.body.title);\n    expect(response.body.results[random].accepts_mercadopago).eq(responseProduct.body.accepts_mercadopago);\n    expect(response.body.results[random].currency_id).eq(responseProduct.body.currency_id);\n    expect(response.body.results[random].shipping.free_shipping).eq(responseProduct.body.shipping.free_shipping);\n  });\n});",
               "err": {},
-              "uuid": "2aebd831-9b47-4ec4-aae4-f1e46fa41e75",
-              "parentUUID": "f2f70f62-09ff-4fe4-92e2-0dcc0f081d4a",
+              "uuid": "40bc8ddc-4586-48e3-be79-58179bcddfce",
+              "parentUUID": "74fa90cf-b96e-44f7-830f-c9892ce39c6b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "17127fad-f6b1-4d9f-b632-676bfb6563dc",
-            "2aebd831-9b47-4ec4-aae4-f1e46fa41e75"
+            "7d9295d2-11f9-474e-8b1a-3eeae27ecd5e",
+            "40bc8ddc-4586-48e3-be79-58179bcddfce"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 73032,
+          "duration": 49266,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
